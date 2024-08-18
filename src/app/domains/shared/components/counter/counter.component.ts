@@ -24,4 +24,26 @@ export class CounterComponent {
     console.log('-'.repeat(10));
     console.log(changes);
   }
+
+  ngOnInit() {
+    // After render
+    // Only one
+    // Async, then, subs
+    console.log('ngOnInit');
+    console.log('-'.repeat(10));
+    console.log('duration => ', this.duration);
+    console.log('message => ', this.message);
+  }
+
+  ngAfterViewInit() {
+    // After render
+    // if the children have already been painted
+    console.log('ngAfterViewInit');
+    console.log('-'.repeat(10));
+  }
+
+  ngOnDestroy() {
+    console.log('ngOnDestroy');
+    console.log('-'.repeat(10));
+  }
 }
