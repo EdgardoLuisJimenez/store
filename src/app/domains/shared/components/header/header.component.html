@@ -30,6 +30,9 @@
     </div>
     <div class="flex items-center">
       <button class="px-4" (click)="togglesideMenu()">
+        <div class="absolute top-1 rounded h-5 w-5 bg-black text-white text-xs">
+          {{ cart.length }} Hola
+        </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -54,7 +57,7 @@
 >
   <div class="flex justify-between items-center">
     <p class="text-xl">My Cart</p>
-    <button (click)="togglesideMenu()">
+    <button class="p-2 border rounded relative" (click)="togglesideMenu()">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
@@ -70,5 +73,28 @@
         />
       </svg>
     </button>
+  </div>
+  <div>
+    @for (product of cart; track product.id ){
+
+    <div>
+      <div class="flex items-center border-b border-gray-300 py-4">
+        <img
+          class="w-12 h-12 object-cover rounded"
+          :[src]="product.image"
+          alt="Product Image"
+        />
+        <div class="ml-4">
+          <p class="text-gray-800">{{ product.title }}</p>
+        </div>
+        <div class="ml-auto">
+          <p class="text-gray-600">{{ product.price }}</p>
+        </div>
+      </div>
+    </div>
+    }
+    <div class="mt-auto flex justify-end">
+      <p class="text-xl font-semibold">Total: {{ priceToPay() }}</p>
+    </div>
   </div>
 </div>

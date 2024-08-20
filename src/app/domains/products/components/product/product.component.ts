@@ -14,7 +14,6 @@ export class ProductComponent {
   @Output() addToCard = new EventEmitter();
 
   addToCardHandler() {
-    console.log('click from child');
-    this.addToCard.emit('Hola este es un mensaje desde el hijo');
+    this.addToCard.emit(this.product);
   }
 }
