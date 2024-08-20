@@ -76,12 +76,11 @@
   </div>
   <div>
     @for (product of cart(); track product.id ){
-
     <div>
       <div class="flex items-center border-b border-gray-300 py-4">
         <img
           class="w-12 h-12 object-cover rounded"
-          :[src]="product.image"
+          [src]="product.images[0]"
           alt="Product Image"
         />
         <div class="ml-4">
