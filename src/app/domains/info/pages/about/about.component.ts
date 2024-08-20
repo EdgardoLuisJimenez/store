@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { CounterComponent } from '../../../shared/components/counter/counter.component';
 import { CommonModule } from '@angular/common';
 import { WaveAudioComponent } from '../../components/wave-audio/wave-audio.component';
+import { HighlightDirective } from '@shared/directives/highlight.directive';
 
 @Component({
   selector: 'app-about',
@@ -11,6 +12,7 @@ import { WaveAudioComponent } from '../../components/wave-audio/wave-audio.compo
     CounterComponent,
     CounterComponent,
     WaveAudioComponent,
+    HighlightDirective,
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css',
