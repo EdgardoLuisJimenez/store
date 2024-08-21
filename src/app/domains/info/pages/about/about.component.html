@@ -1,19 +1,16 @@
-<div class="px-10">
-  <h1 class="text-lg font-bold">About</h1>
-  <p class="text-xs">
-    Lorem, ipsum dolor sit amet consectetur
-    <span appHighlight>adipisicing elit. Tempora aspernatur omnis</span>
-    molestiae explicabo consectetur? Consectetur cum facere, eligendi
-    perspiciatis consequuntur, eos architecto, in sed harum aspernatur nam
-    quaerat aliquid nihil?
-  </p>
-  <p class="text-xs">
-    Numero de clientes @if (duration() > 0) {
-    <app-counter [duration]="duration()" [message]="message()" />
-    }
-  </p>
-  <div>
-    <app-wave-audio audioUrl="audio.mp3" />
-  </div>
+<h1 class="text-lg font-bold">About</h1>
+<p class="text-xs">
+  Lorem, ipsum dolor sit amet consectetur
+  <span appHighlight>adipisicing elit. Tempora aspernatur omnis</span>
+  molestiae explicabo consectetur? Consectetur cum facere, eligendi perspiciatis
+  consequuntur, eos architecto, in sed harum aspernatur nam quaerat aliquid
+  nihil?
+</p>
+<p class="text-xs">
+  Numero de clientes @if (duration() > 0) {
+  <app-counter [duration]="duration()" [message]="message()" />
+  }
+</p>
+<div>
+  <app-wave-audio audioUrl="audio.mp3" />
 </div>
-<p></p>
